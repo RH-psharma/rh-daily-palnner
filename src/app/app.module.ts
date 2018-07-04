@@ -5,17 +5,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { DailyComponent } from './daily.component';
 import { WeeklyComponent } from './weekly.component';
+import { DemoComponent } from './demo.component';
 
 
 
 const routes: Routes = [
   { path: 'weekly-schedule', component: WeeklyComponent },
-  { path: 'daily-schedule', component: DailyComponent }
+  { path: 'daily-schedule', component: DailyComponent },
+  { path: 'demo-schedule', component: DemoComponent }
 ];
 
 @NgModule({
   declarations: [
-    AppComponent,DailyComponent,WeeklyComponent
+    AppComponent,DailyComponent,WeeklyComponent,DemoComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
