@@ -27,6 +27,7 @@ import * as $ from 'jquery';
   .not-resizeable .dhx_event_resize {
       display:none; 
   }
+  
   `]
 })
 export class DemoComponent implements OnInit {
