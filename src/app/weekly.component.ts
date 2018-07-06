@@ -5,14 +5,122 @@ import * as $ from 'jquery';
 
 @Component({
   selector: 'weekly-component',
-  template: `<div #scheduler_here id="scheduler_here" class="dhx_cal_container" style='width:100%; height:600px;'>
-  <div class="dhx_cal_navline">
-      <div class="dhx_cal_date"></div>
-  </div>
+  template: `
+  <div class="weeklyViewPage">
+  <header>
+  <nav class="navbar header-top navbar-expand-md  navbar-dark bg-dark">
+		<span class="navbar-toggler-icon leftmenutrigger"></span>
+		  <a class="navbar-brand" href="#">
+		  <h2>RH</h2>
+		  </a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav pl-2 animate side-nav">
+				  <div class="sidebar-brand p-3">                
+					  <h2>RH</h2>
+						  &nbsp;&nbsp;<span class="appName">APP NAME</span>
+					  <span class="float-right " id="slide-submenu">
+						  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-close"></i></a>
+					  </span>              
+				  </div>
+				  <li class="nav-item">
+						  <a class="nav-link" href="#">Weekly Shedule</a>
+				  </li>
+				  <li class="nav-item">
+						   <a class="nav-link" href="#">Daily Agenda</a>
+				  </li>
+				  <li class="nav-item">
+						   <a class="nav-link" href="#">Walk-in Guest Check-in</a>
+				  </li>
+				  <li class="nav-item">
+						  <a class="nav-link" href="#">Sheduled Appointments</a>
+				  </li>
+				  <li class="nav-item">
+						   <a class="nav-link" href="#">Corporate Events</a>
+				  </li>
+				  <li class="nav-item">
+						   <a class="nav-link" href="#">Reports</a>
+				  </li>
+				  <li class="nav-item">
+						  <a class="nav-link" href="#">My Shedule</a>
+				  </li>
+				  <li class="nav-item">
+						   <a class="nav-link" href="#">Notification</a>
+				  </li>
+				  <li class="nav-item">
+						   <a class="nav-link" href="#">Logout</a>
+				  </li>
+			  </ul>
+			   <ul class="navbar-nav ml-5">
+				   <!-- Dropdown -->
+					  <li class="nav-item dropdown">
+						  <a class="nav-link dropdown-toggle" href="#" id="#" data-toggle="dropdown">
+							  <i class="fa fa-map-marker"></i>&nbsp;&nbsp;#123 Melrose
+						  </a>
+						  <div class="dropdown-menu">
+							  <a class="dropdown-item" href="#">Link 1</a>
+							  <a class="dropdown-item" href="#">Link 2</a>
+							  <a class="dropdown-item" href="#">Link 3</a>
+						  </div>
+					  </li>
+
+			  </ul>
+			  <ul class="navbar-nav ml-md-auto d-md-flex">
+					<li class="nav-item">
+						 <a class="nav-link" href="#"><i class="fa fa-bell-o"></i>&nbsp;&nbsp;Notification</a>
+					</li>
+					<li class="nav-item">
+						   <a class="nav-link" href="#" id="#" data-toggle="dropdown">
+						 <i class="fa fa-user"></i>&nbsp;&nbsp; User Name
+					  </a>
+					</li>
+					<li class="nav-item">
+						   <a class=" nav-link" href="#">Logout</a>
+					</li>
+			  </ul>                   
+		</div>
+  </nav>
+  
+</header>
+  <div #weekly_scheduler id="weekly_scheduler" class="dhx_cal_container" style='width:100%; height:600px;'>
+  <div class="dhx_cal_navline navbar header-top navbar-expand-md  navbar-light bg-light">
+  <a class="nav-link " id="calender1">
+	  <span class="add-on"><i class="fa fa-calendar fa-2x"></i></span>
+  </a>
+  <div class="dhx_cal_prev_button"><i class="fa fa-chevron-left ml-2"></i></div>			
+  <div class="dhx_cal_date"></div>
+  <div class="dhx_cal_next_button"><i class="fa fa-chevron-right ml-2"></i></div>
+	   <ul class="navbar-nav ml-md-auto d-md-flex">                        
+		  <li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="#" data-toggle="dropdown">
+				  Filter
+			  </a>
+			  <div class="dropdown-menu">
+				  <a class="dropdown-item" href="#">Filter Item-1</a>
+				  <a class="dropdown-item" href="#">Filter Item-2</a>
+				  <a class="dropdown-item" href="#">Filter Item-3</a>
+
+			  </div>
+		  </li>
+		   <li class="nav-item">
+			  <a class="nav-link" href="#" id="#" >
+				  Expand All <i class="fa fa-long-arrow-down"></i>
+			  </a>
+		  </li>                       
+		  <li class="nav-item">
+			  <a class="nav-link" href="#" id="#" >
+				  Collapse All <i class="fa fa-long-arrow-up"></i>
+			  </a>
+		  </li>
+	  </ul>
+</div>
   <div class="dhx_cal_header">
   </div>
   <div class="dhx_cal_data">
   </div>		
+</div>
 </div>
   `,
   styles: [`
@@ -25,7 +133,7 @@ import * as $ from 'jquery';
   `]
 })
 export class WeeklyComponent implements OnInit {
-  @ViewChild('scheduler_here') schedulerContainer: ElementRef;
+  @ViewChild('weekly_scheduler') schedulerContainer: ElementRef;
   constructor() {}
 
   ngOnInit() {
@@ -38,29 +146,27 @@ export class WeeklyComponent implements OnInit {
 	scheduler.config.show_loading = true;
 	scheduler.config.dblclick_create = false;
 	
+	scheduler.templates.event_bar_text = function(start_date, end_date, event) {
+		return "<div class='weeklyEventDesignation'>Senior Designer</div><div class='weeklyEventTiming'>"+event.text+"</div>";
+	}
+	
 	scheduler.templates.event_class = function(start,end,ev){
 		return "fullHeightEvent";
 	};
 
     scheduler.clearAll();
    
-	// Copy function
-	// scheduler.attachEvent("onDblClick", function(id, e) {
-	// 	this.copiedEvent = scheduler.getEvent(id);
-	// 	console.log("Event copied successfully.");
-	// });
-
     var elements = [ // original hierarhical array to display
 			{key:10, label:"Field Leader", open: true, children: [
-				{key:20, label:"Elizabeth Taylor"},
-				{key:40, label:"John Williams"},
-				{key:50, label:"David Miller"},
-				{key:60, label:"Linda Brown"},
-				{key:70, label:"George Lucas"}
+				{key:20, label:"https://semantic-ui.com/images/avatar2/large/matthew.png,Elizabeth,Taylor,40"},
+				{key:40, label:"https://semantic-ui.com/images/avatar/large/elliot.jpg,John,Williams,40"},
+				{key:50, label:"https://semantic-ui.com/images/avatar2/large/kristy.png,Kristy,Miller,32"},
+				{key:60, label:"https://semantic-ui.com/images/avatar2/large/molly.png,Linda,Brown,40"},
+				{key:70, label:"https://semantic-ui.com/images/avatar/large/elliot.jpg,George,Luca,40"}
 			]},
 			{key:110, label:"Leadership", open:true, children: [
-				{key:80, label:"Kate Moss"},
-				{key:90, label:"Dian Fossey"}
+				{key:80, label:"https://semantic-ui.com/images/avatar2/large/elyse.png,Kate,Moss,40"},
+				{key:90, label:"https://semantic-ui.com/images/avatar2/large/matthew.png,Dian,Fossey,40"}
 			]}
 		];
 		
@@ -86,18 +192,15 @@ export class WeeklyComponent implements OnInit {
 	//===============
 	//Data loading
 	//===============
+	
 	scheduler.templates.timeline_scale_label = function(key, label, section){
 		if(section.level == 0) {
 			return section.label;
 		}
 
-		console.log(section);
-		console.log(label);
-		console.log(key);
-
-		var employeeName = section.label.split(" ");
+		var employeeName = section.label.split(",");
 		// return label;
-		return  "<div class='custom_scell_name'><span><img class='userProfilePic' height='30' src='data:image/png;base64,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'/></span><span><div class='employeeFirstName'>"+employeeName[0]+"</div><div>"+employeeName[1]+"</div></span></div>";
+		return  "<div class='custom_scell_name'><span><img class='userProfilePic' height='30' src='"+employeeName[0]+"'/></span><span><div class='employeeFirstName'>"+employeeName[1]+"</div><div>"+employeeName[2]+"</div></span><div class='weeklyWorkingHours'>40 Hrs</div></div>";
 	};
 	
 	scheduler.config.lightbox.sections=[	
@@ -106,23 +209,23 @@ export class WeeklyComponent implements OnInit {
 		{name:"time", height:72, type:"time", map_to:"auto"}
 	];
 	scheduler.config.readonly = true;
-	scheduler.init('scheduler_here',new Date(2017,6,30),"timeline");
+	scheduler.init('weekly_scheduler',new Date(2017,6,30),"timeline");
 	scheduler.parse([
-        { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"Task A-89411", section_id:20},
-        { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"Task A-89411", section_id:40},
-        { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"Task A-89411", section_id:50},
-        { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"Task A-89411", section_id:60},
-        { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"Task A-89411", section_id:70},
-        { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"Task A-89411", section_id:80},
-        { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"Task A-89411", section_id:90},
+		{ start_date: "2017-07-30 00:00", end_date: "2017-07-30 12:00", text:"9AM - 6PM", section_id:20},
+		{ start_date: "2017-07-30 12:00", end_date: "2017-07-30 24:00", text:"9AM - 6PM", section_id:20},
+        { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"9AM - 6PM", section_id:40},
+        { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"9AM - 6PM", section_id:50},
+        { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"9AM - 6PM", section_id:60},
+        { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"9AM - 6PM", section_id:70},
+        { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"9AM - 6PM", section_id:80},
+        { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"9AM - 6PM", section_id:90},
 
-        { start_date: "2017-08-01 00:00", end_date: "2017-08-01 24:00", text:"Task A-89411", section_id:40},
-        { start_date: "2017-08-01 00:00", end_date: "2017-08-01 24:00", text:"Task A-89411", section_id:50},
-        { start_date: "2017-08-01 00:00", end_date: "2017-08-01 24:00", text:"Task A-89411", section_id:60},
-        { start_date: "2017-08-01 00:00", end_date: "2017-08-01 24:00", text:"Task A-89411", section_id:80},
-        { start_date: "2017-08-01 00:00", end_date: "2017-08-01 24:00", text:"Task A-89411", section_id:90}
+        { start_date: "2017-08-01 00:00", end_date: "2017-08-01 24:00", text:"9AM - 6PM", section_id:40},
+        { start_date: "2017-08-01 00:00", end_date: "2017-08-01 24:00", text:"9AM - 6PM", section_id:50},
+        { start_date: "2017-08-01 00:00", end_date: "2017-08-01 24:00", text:"9AM - 6PM", section_id:60},
+        { start_date: "2017-08-01 00:00", end_date: "2017-08-01 24:00", text:"9AM - 6PM", section_id:80},
+        { start_date: "2017-08-01 00:00", end_date: "2017-08-01 24:00", text:"9AM - 6PM", section_id:90}
 	],"json");
-
 
 	// scheduler.setCurrentView();//redraws scheduler
 	// scheduler.addSection( {key:"pm3", label:"James Smith"}, "p1");

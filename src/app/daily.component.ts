@@ -6,6 +6,7 @@ import * as $ from 'jquery';
 @Component({
   selector: 'daily',
   template: `
+  
     <div #scheduler_here id="scheduler_here" class="dhx_cal_container" style='width:100%; height:600px;'>
         <div class="dhx_cal_navline">
             <div class="dhx_cal_prev_button">&nbsp;</div>
@@ -169,6 +170,10 @@ export class DailyComponent implements OnInit {
           return css.join(" ");
         }
 
+        scheduler.templates.event_class = function(start,end,ev){
+            return "fullHeightEventDaily";
+        };
+
         //===============
         //Data loading
         //===============
@@ -181,7 +186,7 @@ export class DailyComponent implements OnInit {
         scheduler.init('scheduler_here',new Date(2017,5,30),"timeline");
         scheduler.parse([
             { start_date: "2017-06-30 09:00", end_date: "2017-06-30 12:00", draggable:false, resizeable: false, text:"Task A-12458", section_id:20},
-            { start_date: "2017-06-30 14:00", end_date: "2017-06-30 16:00", draggable:false, resizeable: false,text:"Task A-89411", section_id:20},
+            { start_date: "2017-06-30 12:00", end_date: "2017-06-30 16:00", draggable:false, resizeable: false,text:"Task A-89411", section_id:20},
 
             { start_date: "2017-06-30 10:00", end_date: "2017-06-30 14:00", draggable:false, resizeable: false,text:"Task A-64168", section_id:40},
             { start_date: "2017-06-30 16:00", end_date: "2017-06-30 17:00", draggable:false, resizeable: false,text:"Task A-46598", section_id:40},

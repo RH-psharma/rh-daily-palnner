@@ -1,0 +1,100 @@
+.weeklyViewPage {
+
+#weekly_scheduler .dhx_matrix_scell.folder .dhx_scell_level0 .dhx_scell_name {
+      color: #000 !important;
+    }
+    #weekly_scheduler .dhx_cal_event_line {
+      background-color: #cccccc !important;
+      height: 100% !important;
+      color: #000 !important;
+      text-align: center;
+      padding-right: 10px;
+    }
+    #weekly_scheduler .weeklyEventDesignation {
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+    #weekly_scheduler .dhx_matrix_scell {
+      text-align: left !important;
+    }
+    #weekly_scheduler .dhx_matrix_scell div {
+      text-align: left !important;
+    }
+    #weekly_scheduler .dhx_scell_level1 {
+      padding-left: 0 !important;
+    }
+    #weekly_scheduler .userProfilePic {
+      border-radius: 100%;
+      margin-right: 10px;
+    }
+    #weekly_scheduler .custom_scell_name {
+      display: inline-flex;
+    }
+    #weekly_scheduler .employeeFirstName {
+      font-weight: 700;
+      color: #000;
+    }
+    #weekly_scheduler .weeklyWorkingHours {
+      background-color: #cccccc;
+      height: 12px;
+      font-size: 12px;
+      padding: 4px;
+      border-radius: 4px;
+      align-self: center;
+      position: absolute;
+      right: 20px;
+    }
+    #weekly_scheduler .dhx_scell_name {
+      width: 100%;
+      position: relative;
+    }
+    #wrapper{padding:90px 0px;}
+.navbar-expand-lg .navbar-nav.side-nav{flex-direction: column;}
+.card{margin-bottom: 15px; border-radius:0; box-shadow: 0 3px 5px rgba(0,0,0,.1); }
+.header-top{box-shadow: 0 3px 5px rgba(0,0,0,.1)}
+
+.leftmenutrigger{display: block;margin: 7px 20px 4px 0;cursor: pointer;}
+#wrapper{padding: 90px 15px 15px 15px; }
+.navbar-nav.side-nav.open {left:0;}
+
+.navbar-nav.side-nav{
+    background: #585f66;
+    box-shadow: 2px 1px 2px rgba(0,0,0,.1);
+    position:fixed;
+    top:0;
+    flex-direction: column!important;
+    left:-280px;
+    width:275px;
+    overflow-y:auto;
+    bottom:0;
+    overflow-x:hidden;
+    padding-bottom:40px;
+    z-index: 4;
+}
+.animate{-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+.dhx_cal_navline div {
+    position: initial !important;
+   
+}
+.dhx_cal_navline .dhx_cal_date {
+    border: 0;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Roboto,Arial;
+    width: 31% !important;
+    text-align: center;
+    left: 0;
+    padding: 1px 0 0;
+    color: rgba(0,0,0,.75);
+    z-index: -1;
+}
+.sidebar-brand.p-3 {
+    color: white;
+}
+a.closebtn {
+    color: white;
+}
+.dhx_scell_level0 {
+  display: inline-flex;
+}
+}

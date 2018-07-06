@@ -6,17 +6,20 @@ import * as $ from 'jquery';
 @Component({
   selector: 'demo-component',
   template: `
-  <div id="scheduler_here" class="dhx_cal_container" style="width:100%; height:600px;">
-	<div class="dhx_cal_navline">
+  <div style="width:100%; height:800px;overflow-x:auto;">
+<div id="scheduler_here" class="dhx_cal_container dhx_scheduler_timeline" style="width:1000px; height:100%;">
+	<div class="dhx_cal_navline" style="width: 1000px; height: 59px; left: 0px; top: 0px;">
 		<div class="dhx_cal_prev_button">&nbsp;</div>
 		<div class="dhx_cal_next_button">&nbsp;</div>
-		<div class="dhx_cal_today_button"></div>
-		<div class="dhx_cal_date"></div>
+		<div class="dhx_cal_today_button">Today</div>
+		<div class="dhx_cal_date">30 Jun 2017</div>
+		<div class="dhx_cal_tab dhx_cal_tab_first" name="day_tab" style="right: auto; left: 14px;">Day</div>
+		<div class="dhx_cal_tab" name="week_tab" style="right: auto; left: 75px;">Week</div>
+		<div class="dhx_cal_tab dhx_cal_tab_last" name="month_tab" style="right: auto; left: 136px;">Month</div>
 	</div>
-	<div class="dhx_cal_header">
-	</div>
-	<div class="dhx_cal_data">
-	</div>
+	<div class="dhx_cal_header" style="width: 982px; height: 20px; left: -1px; top: 60px;"><div><div class="dhx_scale_bar " style="width: 31px; height: 18px; left: 200px; top: 0px;">08:00</div><div class="dhx_scale_bar " style="width: 31px; height: 18px; left: 232px; top: 0px;">08:30</div><div class="dhx_scale_bar " style="width: 31px; height: 18px; left: 264px; top: 0px;">09:00</div><div class="dhx_scale_bar " style="width: 31px; height: 18px; left: 296px; top: 0px;">09:30</div><div class="dhx_scale_bar " style="width: 31px; height: 18px; left: 328px; top: 0px;">10:00</div><div class="dhx_scale_bar " style="width: 31px; height: 18px; left: 360px; top: 0px;">10:30</div><div class="dhx_scale_bar " style="width: 31px; height: 18px; left: 392px; top: 0px;">11:00</div><div class="dhx_scale_bar " style="width: 31px; height: 18px; left: 424px; top: 0px;">11:30</div><div class="dhx_scale_bar " style="width: 31px; height: 18px; left: 456px; top: 0px;">12:00</div><div class="dhx_scale_bar " style="width: 31px; height: 18px; left: 488px; top: 0px;">12:30</div><div class="dhx_scale_bar " style="width: 32px; height: 18px; left: 520px; top: 0px;">13:00</div><div class="dhx_scale_bar " style="width: 32px; height: 18px; left: 553px; top: 0px;">13:30</div><div class="dhx_scale_bar " style="width: 32px; height: 18px; left: 586px; top: 0px;">14:00</div><div class="dhx_scale_bar " style="width: 32px; height: 18px; left: 619px; top: 0px;">14:30</div><div class="dhx_scale_bar " style="width: 32px; height: 18px; left: 652px; top: 0px;">15:00</div><div class="dhx_scale_bar " style="width: 32px; height: 18px; left: 685px; top: 0px;">15:30</div><div class="dhx_scale_bar " style="width: 32px; height: 18px; left: 718px; top: 0px;">16:00</div><div class="dhx_scale_bar " style="width: 32px; height: 18px; left: 751px; top: 0px;">16:30</div><div class="dhx_scale_bar " style="width: 32px; height: 18px; left: 784px; top: 0px;">17:00</div><div class="dhx_scale_bar " style="width: 32px; height: 18px; left: 817px; top: 0px;">17:30</div><div class="dhx_scale_bar " style="width: 32px; height: 18px; left: 850px; top: 0px;">18:00</div><div class="dhx_scale_bar " style="width: 32px; height: 18px; left: 883px; top: 0px;">18:30</div><div class="dhx_scale_bar " style="width: 32px; height: 18px; left: 916px; top: 0px;">19:00</div><div class="dhx_scale_bar " style="width: 32px; height: 18px; left: 949px; top: 0px;">19:30</div></div></div>
+	<div class="dhx_cal_data" style="width: 1000px; height: 260px; left: 0px; top: 81px;"><table style="table-layout:fixed;" cellspacing="0" cellpadding="0"><tbody><tr class="dhx_row_folder" style="height:30px;"><td class="dhx_matrix_scell folder" style="width:199px; height:29px;"><div class="dhx_scell_level0"><div class="dhx_scell_expand">-</div><div class="dhx_scell_name">Web Testing Dep.</div></div></td><td><div style="width:782px; height:30px; position:relative;" class="dhx_matrix_line"><table class="dhx_data_table folder" cellpadding="0" cellspacing="0" style="width:782px; height:30px;"><tbody><tr><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td></tr></tbody></table></div></td></tr><tr class="dhx_row_item" style="height:60px;"><td class="dhx_matrix_scell item" style="width:199px; height:59px;"><div class="dhx_scell_level1"><div class="dhx_scell_name">Elizabeth Taylor</div></div></td><td><div style="width:782px; height:60px; position:relative;" class="dhx_matrix_line"><div event_id="1530783967707" class="dhx_cal_event_line not-resizeable" style="position:absolute; top:2px; height: 17px; left:65px; width:177px;"><div class="dhx_event_resize dhx_event_resize_start" style="height: 17px;"></div><div class="dhx_event_resize dhx_event_resize_end" style="height: 17px;"></div>draggable</div><div event_id="1530783967708" class="dhx_cal_event_line not-resizeable" style="position:absolute; top:23px; height: 17px; left:129px; width:375px;"><div class="dhx_event_resize dhx_event_resize_start" style="height: 17px;"></div><div class="dhx_event_resize dhx_event_resize_end" style="height: 17px;"></div>draggable</div><table class="dhx_data_table" cellpadding="0" cellspacing="0" style="width:782px; height:60px;"><tbody><tr><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td></tr></tbody></table></div></td></tr><tr class="dhx_row_folder" style="height:30px;"><td class="dhx_matrix_scell folder" style="width:199px; height:29px;"><div class="dhx_scell_level1"><div class="dhx_scell_expand">+</div><div class="dhx_scell_name">Managers</div></div></td><td><div style="width:782px; height:30px; position:relative;" class="dhx_matrix_line"><table class="dhx_data_table folder" cellpadding="0" cellspacing="0" style="width:782px; height:30px;"><tbody><tr><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td></tr></tbody></table></div></td></tr><tr class="dhx_row_item" style="height:60px;"><td class="dhx_matrix_scell item" style="width:199px; height:59px;"><div class="dhx_scell_level1"><div class="dhx_scell_name">Linda Brown</div></div></td><td><div style="width:782px; height:60px; position:relative;" class="dhx_matrix_line"><div event_id="1530783967712" class="dhx_cal_event_line not-draggable" style="position:absolute; top:2px; height: 17px; left:257px; width:379px;"><div class="dhx_event_resize dhx_event_resize_start" style="height: 17px;"></div><div class="dhx_event_resize dhx_event_resize_end" style="height: 17px;"></div>extendable/shrinkable</div><table class="dhx_data_table" cellpadding="0" cellspacing="0" style="width:782px; height:60px;"><tbody><tr><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td></tr></tbody></table></div></td></tr><tr class="dhx_row_item" style="height:60px;"><td class="dhx_matrix_scell item" style="width:199px; height:59px;"><div class="dhx_scell_level1"><div class="dhx_scell_name">George Lucas</div></div></td><td><div style="width:782px; height:60px; position:relative;" class="dhx_matrix_line"><table class="dhx_data_table" cellpadding="0" cellspacing="0" style="width:782px; height:60px;"><tbody><tr><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td></tr></tbody></table></div></td></tr><tr class="dhx_row_folder" style="height:30px;"><td class="dhx_matrix_scell folder" style="width:199px; height:29px;"><div class="dhx_scell_level0"><div class="dhx_scell_expand">-</div><div class="dhx_scell_name">Human Relations Dep.</div></div></td><td><div style="width:782px; height:30px; position:relative;" class="dhx_matrix_line"><table class="dhx_data_table folder" cellpadding="0" cellspacing="0" style="width:782px; height:30px;"><tbody><tr><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td></tr></tbody></table></div></td></tr><tr class="dhx_row_item" style="height:60px;"><td class="dhx_matrix_scell item" style="width:199px; height:59px;"><div class="dhx_scell_level1"><div class="dhx_scell_name">Kate Moss</div></div></td><td><div style="width:782px; height:60px; position:relative;" class="dhx_matrix_line"><table class="dhx_data_table" cellpadding="0" cellspacing="0" style="width:782px; height:60px;"><tbody><tr><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td></tr></tbody></table></div></td></tr><tr class="dhx_row_item" style="height:60px;"><td class="dhx_matrix_scell item" style="width:199px; height:59px;"><div class="dhx_scell_level1"><div class="dhx_scell_name">Dian Fossey</div></div></td><td><div style="width:782px; height:60px; position:relative;" class="dhx_matrix_line"><table class="dhx_data_table" cellpadding="0" cellspacing="0" style="width:782px; height:60px;"><tbody><tr><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:31px"><div style="width:31px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td><td class="dhx_matrix_cell " style="width:32px"><div style="width:32px"></div></td></tr></tbody></table></div></td></tr></tbody></table></div>
+</div>
 </div>
   `,
   styles: [`
@@ -35,90 +38,96 @@ export class DemoComponent implements OnInit {
     constructor() {}
   
     ngOnInit() {
-      scheduler.config.details_on_create=true;
-      scheduler.config.details_on_dblclick=true;
-      scheduler.config.xml_date="%Y-%m-%d %H:%i";
-      
-      scheduler.clearAll();
-      //===============
-      //Configuration
-      //===============	
-      
-      var elements = [ // original hierarhical array to display
-        {key:10, label:"Field Leader", open: true, children: [
-            {key:20, label:"Elizabeth Taylor"},
-            {key:40, label:"John Williams"},
-            {key:50, label:"David Miller"},
-            {key:60, label:"Linda Brown"},
-            {key:70, label:"George Lucas"}
-        ]},
-        {key:110, label:"Leadership", open:true, children: [
-            {key:80, label:"Kate Moss"},
-            {key:90, label:"Dian Fossey"}
-        ]}
-    ];
-      
-      
-      
-      scheduler.createTimelineView({
-        section_autoheight: false,
-        name:	"timeline",
-        x_unit:	"minute",
-        x_date:	"%H:%i",
-        x_step:	30,
-        x_size: 24,
-        x_start: 16,
-        x_length:	48,
-        y_unit: elements,
-        y_property:	"section_id",
-        render: "tree",
-        folder_dy:30,
-        dy:60
-      });
-      
-      //!!! HERE
-      scheduler.attachEvent("onBeforeDrag", function (id, mode, e){
-          var event = scheduler.getEvent(id);
-          if(mode == "move" && !event.draggable){
-             return false; 
-          }
-          if(mode == "resize" && !event.resizeable){
-             return false;
-          }
-          return true;
-      });
-      
-      scheduler.templates.event_class = function(start, end, event){
-        var css = [];
-        if(!event.draggable){
-          css.push("not-draggable"); 
-        }
-        if(!event.resizeable){
-          css.push("not-resizeable"); 
-        }
-        return css.join(" ");
-      }
-      
-      //===============
-      //Data loading
-      //===============
-      scheduler.config.lightbox.sections=[	
-        {name:"description", height:50, map_to:"text", type:"textarea" , focus:true},
-        {name:"custom", height:30, type:"timeline", options:null , map_to:"section_id" }, //type should be the same as name of the tab
-        {name:"time", height:72, type:"time", map_to:"auto"}
-      ];
-      
-      scheduler.init('scheduler_here',new Date(2017,5,30),"timeline");
-      scheduler.parse([
-        { start_date: "2017-06-30 09:00", end_date: "2017-06-30 12:00", draggable:true, resizeable: false, text:"draggable", section_id:20},
-        { start_date: "2017-06-30 10:00", end_date: "2017-06-30 16:00", draggable:true, resizeable: false, text:"draggable", section_id:20},
-        
-        { start_date: "2017-06-30 12:00", end_date: "2017-06-30 20:00", draggable:true, resizeable: false, text:"draggable", section_id:40},
-        { start_date: "2017-06-30 14:00", end_date: "2017-06-30 16:00", draggable:false, resizeable: true, text:"extendable/shrinkable", section_id:40},
-        
-        { start_date: "2017-06-30 14:30", end_date: "2017-06-30 16:45", draggable:false, resizeable: true, text:"extendable/shrinkable", section_id:50},
-      
-        { start_date: "2017-06-30 12:00", end_date: "2017-06-30 18:00", draggable:false, resizeable: true, text:"extendable/shrinkable", section_id:60}
-      ],"json");
+
+//       scheduler.locale.labels.timeline_tab = "Timeline";
+// scheduler.locale.labels.section_custom="Section";
+scheduler.config.details_on_create=true;
+scheduler.config.details_on_dblclick=true;
+scheduler.config.xml_date="%Y-%m-%d %H:%i";
+
+
+//===============
+//Configuration
+//===============	
+
+var elements = [ // original hierarhical array to display
+	{key:10, label:"Web Testing Dep.", open: true, children: [
+		{key:20, label:"Elizabeth Taylor", open: true },
+		{key:30, label:"Managers",  children: [
+			{key:40, label:"John Williams"},
+			{key:50, label:"David Miller"}
+		]},
+		{key:60, label:"Linda Brown"},
+		{key:70, label:"George Lucas"}
+	]},
+	{key:110, label:"Human Relations Dep.", open:true, children: [
+		{key:80, label:"Kate Moss"},
+		{key:90, label:"Dian Fossey"}
+	]}
+];
+
+
+
+scheduler.createTimelineView({
+	section_autoheight: false,
+	name:	"timeline",
+	x_unit:	"minute",
+	x_date:	"%H:%i",
+	x_step:	30,
+	x_size: 24,
+	x_start: 16,
+	x_length:	48,
+	y_unit: elements,
+	y_property:	"section_id",
+	render: "tree",
+	folder_dy:30,
+	dy:60
+});
+
+//!!! HERE
+scheduler.attachEvent("onBeforeDrag", function (id, mode, e){
+    var event = scheduler.getEvent(id);
+    if(mode == "move" && !event.draggable){
+       return false; 
+    }
+    if(mode == "resize" && !event.resizeable){
+       return false;
+    }
+    return true;
+});
+
+scheduler.templates.event_class = function(start, end, event){
+  var css = [];
+  if(!event.draggable){
+    css.push("not-draggable"); 
+  }
+  if(!event.resizeable){
+    css.push("not-resizeable"); 
+  }
+  return css.join(" ");
+}
+
+//===============
+//Data loading
+//===============
+scheduler.config.lightbox.sections=[	
+	{name:"description", height:50, map_to:"text", type:"textarea" , focus:true},
+	{name:"custom", height:30, type:"timeline", options:null , map_to:"section_id" }, //type should be the same as name of the tab
+	{name:"time", height:72, type:"time", map_to:"auto"}
+];
+
+scheduler.init('scheduler_here',new Date(2017,5,30),"timeline");
+scheduler.parse([
+	{ start_date: "2017-06-30 09:00", end_date: "2017-06-30 12:00", draggable:true, resizeable: false, text:"draggable", section_id:20},
+	{ start_date: "2017-06-30 10:00", end_date: "2017-06-30 16:00", draggable:true, resizeable: false, text:"draggable", section_id:20},
+	
+	{ start_date: "2017-06-30 12:00", end_date: "2017-06-30 20:00", draggable:true, resizeable: false, text:"draggable", section_id:40},
+	{ start_date: "2017-06-30 14:00", end_date: "2017-06-30 16:00", draggable:false, resizeable: true, text:"extendable/shrinkable", section_id:40},
+	
+	{ start_date: "2017-06-30 14:30", end_date: "2017-06-30 16:45", draggable:false, resizeable: true, text:"extendable/shrinkable", section_id:50},
+
+	{ start_date: "2017-06-30 12:00", end_date: "2017-06-30 18:00", draggable:false, resizeable: true, text:"extendable/shrinkable", section_id:60}
+],"json");
+
     }
   }
