@@ -7,16 +7,126 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <style>
-     /* .dhx_cal_event_line {
-        background-color: red !important;
-    } */
+    
+
+#weekly_scheduler .dhx_matrix_scell.folder .dhx_scell_level0 .dhx_scell_name {
+      color: #000 !important;
+    }
+    #weekly_scheduler .dhx_cal_event_line {
+      background-color: #cccccc !important;
+      height: 100% !important;
+      color: #000 !important;
+      text-align: center;
+      padding-right: 10px;
+    }
+    #weekly_scheduler .weeklyEventDesignation {
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+    #weekly_scheduler .dhx_matrix_scell {
+      text-align: left !important;
+    }
+    #weekly_scheduler .dhx_matrix_scell div {
+      text-align: left !important;
+    }
+    #weekly_scheduler .dhx_scell_level1 {
+      padding-left: 0 !important;
+    }
+    #weekly_scheduler .userProfilePic {
+      border-radius: 100%;
+      margin-right: 10px;
+    }
+    #weekly_scheduler .custom_scell_name {
+      display: inline-flex;
+    }
+    #weekly_scheduler .employeeFirstName {
+      font-weight: 700;
+      color: #000;
+    }
+    #weekly_scheduler .weeklyWorkingHours {
+      background-color: #cccccc;
+      height: 12px;
+      font-size: 12px;
+      padding: 4px;
+      border-radius: 4px;
+      align-self: center;
+      position: absolute;
+      right: 20px;
+    }
+    #weekly_scheduler .dhx_scell_name {
+      width: 100%;
+      position: relative;
+    }
+    #wrapper{padding:90px 0px;}
+.weeklyViewPage .navbar-expand-lg .navbar-nav.side-nav{flex-direction: column;}
+.weeklyViewPage .card{margin-bottom: 15px; border-radius:0; box-shadow: 0 3px 5px rgba(0,0,0,.1); }
+.weeklyViewPage .header-top{box-shadow: 0 3px 5px rgba(0,0,0,.1)}
+
+.weeklyViewPage .leftmenutrigger{display: block;margin: 7px 20px 4px 0;cursor: pointer;}
+.weeklyViewPage #wrapper{padding: 90px 15px 15px 15px; }
+.weeklyViewPage .navbar-nav.side-nav.open {left:0;}
+
+.weeklyViewPage .navbar-nav.side-nav{
+    background: #585f66;
+    box-shadow: 2px 1px 2px rgba(0,0,0,.1);
+    position:fixed;
+    top:0;
+    flex-direction: column!important;
+    left:-280px;
+    width:275px;
+    overflow-y:auto;
+    bottom:0;
+    overflow-x:hidden;
+    padding-bottom:40px;
+    z-index: 4;
+}
+.weeklyViewPage .animate{-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+.weeklyViewPage .dhx_cal_navline div {
+    position: initial !important;
+   
+}
+.weeklyViewPage .dhx_cal_navline .dhx_cal_date {
+    border: 0;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Roboto,Arial;
+    width: 31% !important;
+    text-align: center;
+    left: 0;
+    padding: 1px 0 0;
+    color: rgba(0,0,0,.75);
+    z-index: -1;
+}
+.weeklyViewPage .sidebar-brand.p-3 {
+    color: white;
+}
+.weeklyViewPage a.closebtn {
+    color: white;
+}
+.weeklyViewPage .dhx_scell_level0 {
+  display: inline-flex;
+}
+.fullHeightEventDaily {
+  height: 100% !important;
+}
+.fullHeightEventDaily:after {
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  border: 2px solid red;
+}
   </style>
   <!-- <script src="src/dhtmlxscheduler_timeline.js" type="text/javascript"></script>
 	<script src='src/dhtmlxscheduler_treetimeline.js' type="text/javascript"></script> -->
 </head>
 <body>
   <app-root></app-root>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="scripts.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
 </html>
