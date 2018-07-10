@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "build": "ng build --prod",
-    "start": "ng serve",
+    "start": "node server.js",
     "test": "ng test",
     "lint": "tslint ./src/**/*.ts -t verbose",
     "e2e": "ng e2e",
@@ -17,7 +17,6 @@
   "license": "MIT",
   "dependencies": {
     "@angular/animations": "^6.0.0",
-    "@angular/cli": "^6.0.0",
     "@angular/common": "^6.0.0",
     "@angular/compiler": "^6.0.0",
     "@angular/core": "^6.0.0",
@@ -28,14 +27,13 @@
     "@angular/router": "^6.0.0",
     "@angular/upgrade": "^6.0.0",
     "angular-in-memory-web-api": "^0.6.0",
-    "angularfire2": "^5.0.0-rc.11",
     "core-js": "^2.5.4",
     "dhtmlx-gantt": "^5.1.0",
     "dhtmlx-scheduler": "^5.0.1",
-    "firebase": "^5.2.0",
     "jquery": "^3.3.1",
     "moment": "^2.22.2",
     "rxjs": "^6.0.0",
+    "@angular/cli": "^6.0.0",
     "zone.js": "^0.8.24"
   },
   "devDependencies": {
