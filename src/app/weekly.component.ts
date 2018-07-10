@@ -7,121 +7,16 @@ import * as $ from 'jquery';
   selector: 'weekly-component',
   template: `
   <div class="weeklyViewPage">
-  <header>
-  <nav class="navbar header-top navbar-expand-md  navbar-dark bg-dark">
-		<span class="navbar-toggler-icon leftmenutrigger"></span>
-		  <a class="navbar-brand" href="#">
-		  <h2>RH</h2>
-		  </a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-		  <span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarText">
-			<ul class="navbar-nav pl-2 animate side-nav">
-				  <div class="sidebar-brand p-3">                
-					  <h2>RH</h2>
-						  &nbsp;&nbsp;<span class="appName">APP NAME</span>
-					  <span class="float-right " id="slide-submenu">
-						  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-close"></i></a>
-					  </span>              
-				  </div>
-				  <li class="nav-item">
-						  <a class="nav-link" href="#">Weekly Shedule</a>
-				  </li>
-				  <li class="nav-item">
-						   <a class="nav-link" href="#">Daily Agenda</a>
-				  </li>
-				  <li class="nav-item">
-						   <a class="nav-link" href="#">Walk-in Guest Check-in</a>
-				  </li>
-				  <li class="nav-item">
-						  <a class="nav-link" href="#">Sheduled Appointments</a>
-				  </li>
-				  <li class="nav-item">
-						   <a class="nav-link" href="#">Corporate Events</a>
-				  </li>
-				  <li class="nav-item">
-						   <a class="nav-link" href="#">Reports</a>
-				  </li>
-				  <li class="nav-item">
-						  <a class="nav-link" href="#">My Shedule</a>
-				  </li>
-				  <li class="nav-item">
-						   <a class="nav-link" href="#">Notification</a>
-				  </li>
-				  <li class="nav-item">
-						   <a class="nav-link" href="#">Logout</a>
-				  </li>
-			  </ul>
-			   <ul class="navbar-nav ml-5">
-				   <!-- Dropdown -->
-					  <li class="nav-item dropdown">
-						  <a class="nav-link dropdown-toggle" href="#" id="#" data-toggle="dropdown">
-							  <i class="fa fa-map-marker"></i>&nbsp;&nbsp;#123 Melrose
-						  </a>
-						  <div class="dropdown-menu">
-							  <a class="dropdown-item" href="#">Link 1</a>
-							  <a class="dropdown-item" href="#">Link 2</a>
-							  <a class="dropdown-item" href="#">Link 3</a>
-						  </div>
-					  </li>
-
-			  </ul>
-			  <ul class="navbar-nav ml-md-auto d-md-flex">
-					<li class="nav-item">
-						 <a class="nav-link" href="#"><i class="fa fa-bell-o"></i>&nbsp;&nbsp;Notification</a>
-					</li>
-					<li class="nav-item">
-						   <a class="nav-link" href="#" id="#" data-toggle="dropdown">
-						 <i class="fa fa-user"></i>&nbsp;&nbsp; User Name
-					  </a>
-					</li>
-					<li class="nav-item">
-						   <a class=" nav-link" href="#">Logout</a>
-					</li>
-			  </ul>                   
-		</div>
-  </nav>
-  
-</header>
   <div #weekly_scheduler id="weekly_scheduler" class="dhx_cal_container" style='width:100%; height:600px;'>
-  <div class="dhx_cal_navline navbar header-top navbar-expand-md  navbar-light bg-light">
-  <a class="nav-link " id="calender1">
-	  <span class="add-on"><i class="fa fa-calendar fa-2x"></i></span>
-  </a>
-  <div class="dhx_cal_prev_button"><i class="fa fa-chevron-left ml-2"></i></div>			
-  <div class="dhx_cal_date"></div>
-  <div class="dhx_cal_next_button"><i class="fa fa-chevron-right ml-2"></i></div>
-	   <ul class="navbar-nav ml-md-auto d-md-flex">                        
-		  <li class="nav-item dropdown">
-			  <a class="nav-link dropdown-toggle" href="#" id="#" data-toggle="dropdown">
-				  Filter
-			  </a>
-			  <div class="dropdown-menu">
-				  <a class="dropdown-item" href="#">Filter Item-1</a>
-				  <a class="dropdown-item" href="#">Filter Item-2</a>
-				  <a class="dropdown-item" href="#">Filter Item-3</a>
-
-			  </div>
-		  </li>
-		   <li class="nav-item">
-			  <a class="nav-link" href="#" id="#" >
-				  Expand All <i class="fa fa-long-arrow-down"></i>
-			  </a>
-		  </li>                       
-		  <li class="nav-item">
-			  <a class="nav-link" href="#" id="#" >
-				  Collapse All <i class="fa fa-long-arrow-up"></i>
-			  </a>
-		  </li>
-	  </ul>
-</div>
-  <div class="dhx_cal_header">
-  </div>
-  <div class="dhx_cal_data">
-  </div>		
-</div>
-</div>
+        <div class="dhx_cal_navline">
+            <div class="dhx_cal_date"></div>
+        </div>
+        <div class="dhx_cal_header">
+        </div>
+        <div class="dhx_cal_data">
+        </div>		
+	</div>
+	</div>
   `,
   styles: [`
     .dhx_matrix_scell.folder .dhx_scell_level0 .dhx_scell_name {
@@ -211,8 +106,7 @@ export class WeeklyComponent implements OnInit {
 	scheduler.config.readonly = true;
 	scheduler.init('weekly_scheduler',new Date(2017,6,30),"timeline");
 	scheduler.parse([
-		{ start_date: "2017-07-30 00:00", end_date: "2017-07-30 12:00", text:"9AM - 6PM", section_id:20},
-		{ start_date: "2017-07-30 12:00", end_date: "2017-07-30 24:00", text:"9AM - 6PM", section_id:20},
+		{ start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"9AM - 6PM", section_id:20},
         { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"9AM - 6PM", section_id:40},
         { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"9AM - 6PM", section_id:50},
         { start_date: "2017-07-30 00:00", end_date: "2017-07-30 24:00", text:"9AM - 6PM", section_id:60},
